@@ -9,7 +9,9 @@ A.[Twitter](https://twitter.com)上でツイート一つで暗号通貨NEMのモ
 $ composer install
 ```
 とコマンドをうち必要なライブラリを取り寄せる。
+
 またNEM用にSaltライブラリを導入（詳しくはNEM/Rreadme.mdを参照
+
 次に、このREADME.mdが置いてあるのと同じ階層に、以下を例に、Twitter操作用のAPIキーの設定ファイルを置く。
 ```
 	<?php
