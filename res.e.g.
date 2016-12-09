@@ -1,0 +1,164 @@
+object(stdClass)#112 (25) {
+  ["created_at"]=>
+  string(30) "Fri Dec 09 16:36:14 +0000 2016"
+  ["id"]=>
+  int(807262591777009664)
+  ["id_str"]=>
+  string(18) "807262591777009664"
+  ["text"]=>
+  string(14) "@onoonokatio a"
+  ["source"]=>
+  string(83) "<a href="https://about.twitter.com/products/tweetdeck" rel="nofollow">TweetDeck</a>"
+  ["truncated"]=>
+  bool(false)
+  ["in_reply_to_status_id"]=>
+  NULL
+  ["in_reply_to_status_id_str"]=>
+  NULL
+  ["in_reply_to_user_id"]=>
+  int(3304136970)
+  ["in_reply_to_user_id_str"]=>
+  string(10) "3304136970"
+  ["in_reply_to_screen_name"]=>
+  string(11) "onoonokatio"
+  ["user"]=>
+  object(stdClass)#109 (38) {
+		["id"]=>
+		int(3304136970)
+		["id_str"]=>
+		string(10) "3304136970"
+		["name"]=>
+		string(30) "おのかちお ! importance ;"
+		["screen_name"]=>
+		string(11) "onoonokatio"
+		["location"]=>
+		NULL
+		["url"]=>
+		string(31) "http://onokatio.hatenablog.com/"
+		["description"]=>
+		string(235) "高坂桐乃とBTCとPHPとDebianとL3スイッチとxorゲートとはんだ付けと可愛い幼女をこよなく愛する高校生
+#ナイセン団
+＼( 'ω')／ｳｵｵｵｵｵｱｱｱｰｰｰｯ！
+NITKC1J
+公式→@onokatio_"
+		["protected"]=>
+		bool(false)
+		["verified"]=>
+		bool(false)
+		["followers_count"]=>
+		int(1850)
+		["friends_count"]=>
+		int(2192)
+		["listed_count"]=>
+		int(29)
+		["favourites_count"]=>
+		int(15985)
+		["statuses_count"]=>
+		int(17968)
+		["created_at"]=>
+		string(30) "Sun Aug 02 11:00:33 +0000 2015"
+		["utc_offset"]=>
+		int(32400)
+		["time_zone"]=>
+		string(5) "Tokyo"
+		["geo_enabled"]=>
+		bool(false)
+		["lang"]=>
+		string(2) "ja"
+		["contributors_enabled"]=>
+		bool(false)
+		["is_translator"]=>
+		bool(false)
+		["profile_background_color"]=>
+		string(6) "000000"
+		["profile_background_image_url"]=>
+		string(48) "http://abs.twimg.com/images/themes/theme1/bg.png"
+		["profile_background_image_url_https"]=>
+		string(49) "https://abs.twimg.com/images/themes/theme1/bg.png"
+		["profile_background_tile"]=>
+		bool(false)
+		["profile_link_color"]=>
+		string(6) "19CF86"
+		["profile_sidebar_border_color"]=>
+		string(6) "000000"
+		["profile_sidebar_fill_color"]=>
+		string(6) "000000"
+		["profile_text_color"]=>
+		string(6) "000000"
+		["profile_use_background_image"]=>
+		bool(false)
+		["profile_image_url"]=>
+		string(74) "http://pbs.twimg.com/profile_images/792736041425772544/ZsQKhn-p_normal.jpg"
+		["profile_image_url_https"]=>
+		string(75) "https://pbs.twimg.com/profile_images/792736041425772544/ZsQKhn-p_normal.jpg"
+		["profile_banner_url"]=>
+		string(59) "https://pbs.twimg.com/profile_banners/3304136970/1480342474"
+		["default_profile"]=>
+		bool(false)
+		["default_profile_image"]=>
+		bool(false)
+		["following"]=>
+		NULL
+		["follow_request_sent"]=>
+		NULL
+		["notifications"]=>
+		NULL
+  }
+  ["geo"]=>
+  NULL
+  ["coordinates"]=>
+  NULL
+  ["place"]=>
+  NULL
+  ["contributors"]=>
+  NULL
+  ["is_quote_status"]=>
+  bool(false)
+  ["retweet_count"]=>
+  int(0)
+  ["favorite_count"]=>
+  int(0)
+  ["entities"]=>
+  object(stdClass)#110 (4) {
+		["hashtags"]=>
+		array(0) {
+		}
+		["urls"]=>
+		array(0) {
+		}
+		["user_mentions"]=>
+		array(1) {
+		  [0]=>
+		  object(stdClass)#111 (5) {
+				["screen_name"]=>
+				string(11) "onoonokatio"
+				["name"]=>
+				string(30) "おのかちお ! importance ;"
+				["id"]=>
+				int(3304136970)
+				["id_str"]=>
+				string(10) "3304136970"
+				["indices"]=>
+				array(2) {
+				  [0]=>
+				  int(0)
+				  [1]=>
+				  int(12)
+				}
+		  }
+		}
+		["symbols"]=>
+		array(0) {
+		}
+  }
+  ["favorited"]=>
+  bool(false)
+  ["retweeted"]=>
+  bool(false)
+  ["filter_level"]=>
+  string(3) "low"
+  ["lang"]=>
+  string(3) "und"
+  ["timestamp_ms"]=>
+  string(13) "1481301374750"
+}

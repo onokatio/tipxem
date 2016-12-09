@@ -7,15 +7,25 @@
 	use mpyw\Cowitter\Client;
 	use mpyw\Cowitter\HttpException;
 
+	define('MYNAME','@onoonokatio');
+
 	try {
 		Co::wait(function () {
 			$client = new Client([CK, CS, AT, ATS]); //API情報からクライアントオブジェクトを作成	
-			//$client->post('statuses/update', ['status' => 'test tweet by api']);
-			$task = $client->streamingAsync('user', function ($status) {
+			yield $client->streamingAsync('user', function ($status) { //ツイートを取得した時の動作
 				if (!isset($status->text)) return;
-				echo "===================={$status->user->name}({$status->user->screen_name})====================\n{$status->text}\n";
+				if(strpos($status->text,MYNAME)===false) return;
+				$get = str_replace(array(MYNAME,"\n"),array('',' '),$status->text);
+				if(strpos($get,' tip')!==false){
+					echo "tipmode";
+				}else if(strpos($get,' balance')!==false){
+					echo "balancemode";
+				}else if(strpos($get,' deposit')!==false){
+					echo "depositmode";
+				}
+				//var_dump($status);
 			});
-			yield $task;
+//			yield $task;
 		});
 	} catch (RuntimeException $e) { //エラーが起こった時の情報を変数$eに入れる
 		exit("Error: {$e->getMessage()}\n"); //エラーが起きたらメッセージを表示して終了
