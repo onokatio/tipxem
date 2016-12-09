@@ -1,6 +1,6 @@
 ﻿<?php
 require_once ("./sha3.php");
-require_once ("./salt/autoload.php");
+require_once ("./Salt/autoload.php");
 class KeyPair {
     private $binaryPrivate = '';
     private $binaryPublic = '';
