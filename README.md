@@ -7,7 +7,7 @@ A.[Twitter](https://twitter.com)上でツイート一つで暗号通貨NEMのモ
 1.composerが入った環境で、
 ```
 $ composer install
-'''
+```
 とコマンドをうち必要なライブラリを取り寄せる
 
 2.このREADME.mdが置いてあるのと同じ階層に、以下を例に、Twitter操作用のAPIキーの設定ファイルを置く。
