@@ -53,3 +53,64 @@ echo $kp->getBinaryPublic() . PHP_EOL; //Binary String な 公開鍵
 echo $kp->sign("aa"); //1f9195b4d17665e414fdae46ad90b4eace85afde44ed572299da076022155baeb58db9afff27e7893d725798df798db3ff436b2a4e1974cb348eca4916e1210d
 
 ```
+
+### TransacrionBuilder.php
+配列からトランザクションのバイナリ、及びHex文字列を作ります。
+
+**現在不完全 注意して使用すること**
+
+feeは自動で計算されますが、指定するほうが良い。
+```
+require_once("./TransacrionBuilder.php");
+
+$data = array(
+  'type' => 0x101,
+  'version' => 0x98000001,
+  'signer' => '7be68a839e3c5bd59a9b38c7a68ae2470aaff834bd2c12e1047d5ddc27596c11',
+  'recipient' => 'TB235JLAOGALDATDJC7LXDMZSDMFBUMDVIBFVQPF',
+  'amount' => 1000 * 1000000,
+  'fee' => 1 * 1000000,
+  'message' => array( 'payload' => 'e697a5e69cace8aa9ee381aee381a6e38199e381a8', 'type' => 1),
+  "timestamp" => timestamp2NEMTime(time()),
+  "deadline" => timestamp2NEMTime(time()) + 2 * 60
+);
+$tx = new TransactionBuilder($data);
+echo $tx->getBinary() . PHP_EOL;
+echo $tx->getHex() . PHP_EOL;
+```
+
+### NEMUtil.php
+ちょっとしたツール群
+
+## 使用例
+```
+<?php
+require_once("./KeyPair.php");
+require_once("./TransactionBuilder.php");
+require_once("./NEM.php");
+require_once("./NEMUtil.php");
+$conf = array('nis_address' => '192.3.61.243');
+$nem = new NEM($conf);
+
+$kp = new KeyPair("e0be7ba79288832449b96cc259cc14e59509d88e6a97be1996dc71a153629d89");
+echo $kp->getHexPrivate() . PHP_EOL;
+echo $kp->getHexPublic() . PHP_EOL;
+
+$data = array(
+  'type' => 0x101,
+  'version' => 0x98000001,
+  'signer' => '7be68a839e3c5bd59a9b38c7a68ae2470aaff834bd2c12e1047d5ddc27596c11',
+  'recipient' => 'TB235JLAOGALDATDJC7LXDMZSDMFBUMDVIBFVQPF',
+  'amount' => 1000 * 1000000,
+  'fee' => 1 * 1000000,
+  'message' => array( 'payload' => 'e697a5e69cace8aa9ee381aee381a6e38199e381a8', 'type' => 1),
+  "timestamp" => timestamp2NEMTime(time()),
+  "deadline" => timestamp2NEMTime(time()) + 2 * 60
+);
+$tx = new TransactionBuilder($data);
+
+$signature = $kp->sign($tx->getBinary);
+
+$res = $nem->nis_post('/transaction/announce', array("data" => $tx->getHex, "signature" => $signature));
+echo $res;
+```
