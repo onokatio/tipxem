@@ -7,14 +7,14 @@ class KeyPair {
     private $isFailed = false;
     public function __construct($private) {
         if (is_string($private)) {
-            if (strlen($private) === 32) { // array private key
-                $this->binaryPrivate = pack("H*", $this->HexReverse($this->fixPrivateKey($private)));
-            } elseif (strlen($this->fixPrivateKey($private)) === 64) { //binary private key
+            if (strlen($private) === 32) { // Binary private key
                 $this->binaryPrivate = $private;
+            } elseif (strlen($this->fixPrivateKey($private)) === 64) { //Hex private key
+                $this->binaryPrivate = pack("H*", $this->HexReverse($this->fixPrivateKey($private)));
             } else {
                 $this->isFailed = true;
             }
-        } elseif (is_array($private) && count($private) === 32) { //Hex private key
+        } elseif (is_array($private) && count($private) === 32) { //Array private key
             $this->binaryPrivate = pack("C*", ...array_merge($private));
         } else {
             $this->isFailed = true;
