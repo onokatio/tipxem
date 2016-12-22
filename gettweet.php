@@ -19,9 +19,11 @@
 				if(strpos($get,' tip')!==false){
 					echo "tipmode";
 				}else if(strpos($get,' balance')!==false){
-					echo "balancemode";
+					//echo "your balance is 0!";
+					//SELECT balance FROM tipxem.account WHERE uid == $uid;
 				}else if(strpos($get,' deposit')!==false){
-					echo "depositmode";
+					//echo "depositmode";
+					//SELECT adddres FROM tipxem.account WHERE uid == $uid;
 				}
 				//var_dump($status);
 			});
