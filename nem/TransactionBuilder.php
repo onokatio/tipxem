@@ -67,6 +67,8 @@ class TransactionBuilder {
             long2binary($this->amount);
             if ($this->message['payload'] && $decodedMessage = hex2bin($this->message['payload'])) {
                 $this->binary.= int2binary(8 + strlen($this->message['payload']) / 2) . int2binary($this->message['type']) . int2binary(strlen($this->message['payload']) / 2) . $decodedMessage;
+            }else{
+              $this->binary.= int2binary(0);
             }
         }
     }
