@@ -5,7 +5,7 @@
 	use mpyw\Co\Co; //名前空間の設定
 	use mpyw\Cowitter\Client;
 
-	define('MYNAME','@onoonokatio'); //ツイートの中から消すために、自分のツイッターIDを定義
+	define('MYNAME','@tip_xem'); //ツイートの中から消すために、自分のツイッターIDを定義
 
 	Co::wait(function () {
 
