@@ -109,8 +109,8 @@ $data = array(
 );
 $tx = new TransactionBuilder($data);
 
-$signature = $kp->sign($tx->getBinary);
+$signature = $kp->sign($tx->getBinary());
 
-$res = $nem->nis_post('/transaction/announce', array("data" => $tx->getHex, "signature" => $signature));
+$res = $nem->nis_post('/transaction/announce', array("data" => $tx->getHex(), "signature" => $signature));
 echo $res;
 ```
