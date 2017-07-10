@@ -1,10 +1,10 @@
 # tipxem
 
-##これはなにか
+## これはなにか
 
 [Twitter](https://twitter.com)上でツイート一つで、NEMのモザイク「XEM」を送受金できるように作られたBOT。
 
-##必要なもの
+## 必要なもの
 composerが入った環境で、
 
 ```
@@ -24,4 +24,5 @@ $ composer install
 		define('CS','カスタマーシークレット');
 	?>
 ```
+
 APIキーを取得するには[ここ](https://apps.twitter.com/)
